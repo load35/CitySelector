@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="l81-kg-dLP">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="XLm-CY-vav">
+            <objects>
+                <tabBarController id="l81-kg-dLP" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="cgc-1J-hcH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="mIx-87-5em" kind="relationship" relationship="viewControllers" id="wkB-GQ-4DZ"/>
+                        <segue destination="zlq-6Z-K0m" kind="relationship" relationship="viewControllers" id="2IG-c7-b2r"/>
+                        <segue destination="pXc-Ef-4nC" kind="relationship" relationship="viewControllers" id="Xa9-8k-4zv"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qju-VO-CzD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-541" y="158"/>
+        </scene>
+        <!--Countries-->
+        <scene sceneID="kyn-FN-bsh">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Countries" id="mIx-87-5em" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Countries" id="wtu-pv-oJK"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YJb-Oo-JgN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-40" y="83"/>
+        </scene>
+        <!--Favorite-->
+        <scene sceneID="a5R-qE-smd">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Favorite" id="zlq-6Z-K0m" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="sfQ-bB-RKT"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9jd-DQ-x2u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-45.5" y="158"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="yQA-K2-zbY">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Settings" id="pXc-Ef-4nC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Settings" id="I0g-0e-XR2"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Ay-s0-TmW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-44.5" y="230"/>
+        </scene>
+    </scenes>
+</document>

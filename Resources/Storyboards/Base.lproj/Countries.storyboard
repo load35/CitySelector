@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gV2-yN-0CX">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Countries-->
+        <scene sceneID="9zk-Td-dmV">
+            <objects>
+                <tableViewController id="k0e-eK-gS9" customClass="CountriesTableViewController" customModule="SelectedCityTestApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="sfd-df-pzw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Country cell identifier" textLabel="uVm-7F-3ul" style="IBUITableViewCellStyleDefault" id="NsM-9o-Cyg" customClass="CountryTableViewCell" customModule="SelectedCityTestApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NsM-9o-Cyg" id="G6A-rj-pSb">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uVm-7F-3ul">
+                                            <rect key="frame" x="15" y="0.0" width="570" height="43"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="City cell identifier" id="V8U-fp-QHD" customClass="CityTableViewCell" customModule="SelectedCityTestApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="136" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="V8U-fp-QHD" id="VwK-wc-0EF">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AQ4-3c-P2F">
+                                            <rect key="frame" x="552" y="0.0" width="40" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="40" id="5zH-U1-mAI"/>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="Gzo-fY-aqw"/>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="R7H-My-Ves"/>
+                                                <constraint firstAttribute="height" constant="44" id="swS-FS-3Ev"/>
+                                            </constraints>
+                                            <state key="normal" image="city-favorite"/>
+                                            <state key="selected" image="city-favorite-selected"/>
+                                            <connections>
+                                                <action selector="favoriteClick:" destination="V8U-fp-QHD" eventType="touchUpInside" id="rv8-Zl-72r"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y7e-PO-7rG">
+                                            <rect key="frame" x="38" y="11" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="AQ4-3c-P2F" secondAttribute="trailing" id="Goq-bN-xSn"/>
+                                        <constraint firstItem="AQ4-3c-P2F" firstAttribute="centerY" secondItem="VwK-wc-0EF" secondAttribute="centerY" id="aRb-va-Mnr"/>
+                                        <constraint firstItem="y7e-PO-7rG" firstAttribute="leading" secondItem="VwK-wc-0EF" secondAttribute="leadingMargin" constant="30" id="shL-4k-NIL"/>
+                                        <constraint firstItem="y7e-PO-7rG" firstAttribute="centerY" secondItem="VwK-wc-0EF" secondAttribute="centerY" id="yaJ-Gz-67g"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectionColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="cityNameLabel" destination="y7e-PO-7rG" id="LNe-80-tG1"/>
+                                    <outlet property="favoriteButton" destination="AQ4-3c-P2F" id="wtt-WX-Gq9"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="k0e-eK-gS9" id="pTZ-rl-4qO"/>
+                            <outlet property="delegate" destination="k0e-eK-gS9" id="icc-9s-QRq"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Countries" id="isY-2s-eYU"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="28h-dH-bhi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="627" y="511"/>
+        </scene>
+        <!--Countries-->
+        <scene sceneID="WJ3-gB-ZjS">
+            <objects>
+                <navigationController title="Countries" id="gV2-yN-0CX" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2Qj-LI-YfT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="k0e-eK-gS9" kind="relationship" relationship="rootViewController" id="cyZ-w0-WGE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TZT-To-Epf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-66" y="511"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="city-favorite" width="20" height="20"/>
+        <image name="city-favorite-selected" width="20" height="20"/>
+    </resources>
+</document>

@@ -1,0 +1,9 @@
+
+/* Class = "UILabel"; text = "Settings"; ObjectID = "AeV-X0-cFp"; */
+"AeV-X0-cFp.text" = "Настройки";
+
+/* Class = "UINavigationItem"; title = "Settings"; ObjectID = "B44-zg-iLx"; */
+"B44-zg-iLx.title" = "Настройки";
+
+/* Class = "UINavigationController"; title = "Settings"; ObjectID = "Or7-Pp-U3f"; */
+"Or7-Pp-U3f.title" = "Настройки";

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Yzp-8E-xca">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Favorite-->
+        <scene sceneID="QfX-0B-KoM">
+            <objects>
+                <tableViewController id="H2W-Oe-CLQ" customClass="FavoriteTableViewController" customModule="SelectedCityTestApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="jni-8S-g0f">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Favorite Cell Identifier" id="kRR-Pr-f3d" customClass="FavoriteTableViewCell" customModule="SelectedCityTestApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kRR-Pr-f3d" id="Vjx-Jt-jnl">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TTy-TM-Okb">
+                                            <rect key="frame" x="15" y="11" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQF-10-hyY">
+                                            <rect key="frame" x="537" y="2" width="40" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="1YN-AQ-mVB"/>
+                                                <constraint firstAttribute="width" constant="40" id="lCu-Mr-hiZ"/>
+                                            </constraints>
+                                            <state key="normal" image="favorite-delete"/>
+                                            <connections>
+                                                <action selector="deleteClick:" destination="kRR-Pr-f3d" eventType="touchUpInside" id="WXV-PX-RyF"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="NQF-10-hyY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="TTy-TM-Okb" secondAttribute="trailing" constant="10" id="3i7-bm-ukg"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="NQF-10-hyY" secondAttribute="trailing" constant="15" id="Ber-HI-f2t"/>
+                                        <constraint firstItem="NQF-10-hyY" firstAttribute="centerY" secondItem="Vjx-Jt-jnl" secondAttribute="centerY" id="WU5-hU-1xl"/>
+                                        <constraint firstItem="TTy-TM-Okb" firstAttribute="centerY" secondItem="Vjx-Jt-jnl" secondAttribute="centerY" id="a5z-2V-ZpP"/>
+                                        <constraint firstItem="TTy-TM-Okb" firstAttribute="leading" secondItem="Vjx-Jt-jnl" secondAttribute="leadingMargin" constant="7" id="pm6-qn-YIo"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="cityNameLabel" destination="TTy-TM-Okb" id="ZTO-OU-OiU"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="H2W-Oe-CLQ" id="Dwt-7q-eu9"/>
+                            <outlet property="delegate" destination="H2W-Oe-CLQ" id="v14-xG-t3G"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Favorite" id="x3H-mF-7rZ"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SnS-3d-e6b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="720" y="404"/>
+        </scene>
+        <!--Favorite-->
+        <scene sceneID="EJP-tQ-I8g">
+            <objects>
+                <navigationController title="Favorite" id="Yzp-8E-xca" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iP5-AM-nZD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="H2W-Oe-CLQ" kind="relationship" relationship="rootViewController" id="cJy-wh-rxS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d4n-ni-FdH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-100" y="404"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="favorite-delete" width="20" height="20"/>
+    </resources>
+</document>
